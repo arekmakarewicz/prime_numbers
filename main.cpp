@@ -6,22 +6,26 @@ int main()
 {
     unsigned long long prime = 2;
 
-    //cout << "Hello World!" << endl;
+    cout << "Start value" << endl;
+    cin >> prime;
     cout << "Prime numbers:" << endl;
-    //cout << sizeof (prime) << endl;
 
     while (true)
     {
-        bool flag = false;
+        bool isDevider = false;
+        unsigned long long lastInForLoop = 0;
 
-        for ( unsigned long long i = 2; flag == true || i >= prime; i++)
+
+        for ( unsigned long long i = 2; isDevider == false ; i++)
         {
             if( prime % i == 0)
             {
-                flag = true;
+                isDevider = true;
+                lastInForLoop = i;
             }
         }
-        if(flag == false)
+
+        if(isDevider == true && lastInForLoop == prime)
         {
             cout << prime << endl;
         }
