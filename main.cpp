@@ -4,19 +4,20 @@ using namespace std;
 
 int main()
 {
-    unsigned long long prime = 2;
+    cout << "Start value: (from 2 to" << endl << "18446744073709551615)" << endl;
 
-    cout << "Start value" << endl;
+    unsigned long long int prime;
     cin >> prime;
+
     cout << "Prime numbers:" << endl;
 
     while (true)
     {
         bool isDevider = false;
-        unsigned long long lastInForLoop = 0;
+        unsigned long long int lastInForLoop = 0;
 
 
-        for ( unsigned long long i = 2; isDevider == false ; i++)
+        for ( unsigned long long int i = 2; isDevider == false ; i++)
         {
             if( prime % i == 0)
             {
@@ -27,7 +28,11 @@ int main()
 
         if(isDevider == true && lastInForLoop == prime)
         {
-            cout << prime << endl;
+            cout << prime << " is NOT prime" << endl;
+        }
+        else
+        {
+            cout << prime << " is NOT prime" << endl;
         }
 
         prime++;
