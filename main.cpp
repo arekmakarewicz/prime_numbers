@@ -11,7 +11,7 @@ int main()
 
     cout << "Prime numbers:" << endl;
 
-    while (true)
+    while (prime >= 2)
     {
         bool isDevider = false;
         unsigned long long int lastInForLoop = 0;
@@ -28,11 +28,7 @@ int main()
 
         if(isDevider == true && lastInForLoop == prime)
         {
-            cout << prime << " is NOT prime" << endl;
-        }
-        else
-        {
-            cout << prime << " is NOT prime" << endl;
+            cout << prime << " ";
         }
 
         prime++;
