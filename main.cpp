@@ -9,30 +9,43 @@ int main()
     unsigned long long int prime;
     cin >> prime;
 
+    cout << "+ or -" << endl;
+
+    string plus_Or_Minus;
+    cin >> plus_Or_Minus;
+
     cout << "Prime numbers:" << endl;
 
-    while (prime >= 2)
+    while ( prime >= 2 )
     {
-        bool isDevider = false;
+        bool isDivider = false;
         unsigned long long int lastInForLoop = 0;
 
 
-        for ( unsigned long long int i = 2; isDevider == false ; i++)
+        for ( unsigned long long int i = 2; isDivider == false ; i++)
         {
-            if( prime % i == 0)
+            //cout << i << endl;
+
+            if( prime % i == 0 )
             {
-                isDevider = true;
+                isDivider = true;
                 lastInForLoop = i;
             }
         }
 
-        if(isDevider == true && lastInForLoop == prime)
+        if( isDivider == true && lastInForLoop == prime )
         {
             cout << prime << " ";
         }
 
-        prime++;
+        if( plus_Or_Minus == "+")
+            prime++;
+        else if( plus_Or_Minus == "-" )
+            prime--;
     }
+
+    getchar();
+    getchar();
 
     return 0;
 }
